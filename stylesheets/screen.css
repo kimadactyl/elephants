@@ -1,0 +1,56 @@
+/* line 1, ../sass/screen.sass */
+#players {
+  text-align: center;
+}
+
+/* line 3, ../sass/screen.sass */
+#finished {
+  display: none;
+}
+
+/* line 5, ../sass/screen.sass */
+audio {
+  width: 710px;
+}
+
+/* line 7, ../sass/screen.sass */
+#video-container iframe {
+  height: 576px;
+  width: 720px;
+}
+
+/* line 10, ../sass/screen.sass */
+h3#video-popover {
+  position: absolute;
+  top: 387px;
+  left: 139px;
+  color: white;
+  z-index: 2147483647;
+  display: none;
+  font-weight: normal;
+}
+
+/* line 20, ../sass/screen.sass */
+.mejs-container .mejs-controls div {
+  float: right;
+}
+/* line 22, ../sass/screen.sass */
+.mejs-container .mejs-controls .mejs-playpause-button {
+  float: left;
+}
+
+/* line 25, ../sass/screen.sass */
+#audio-container {
+  display: none;
+}
+
+/* line 29, ../sass/screen.sass */
+#playlist li a {
+  text-decoration: none;
+  border-bottom: 1px dotted #aaaaaa;
+}
+/* line 32, ../sass/screen.sass */
+#playlist li a:hover {
+  cursor: pointer;
+  cursor: hand;
+}

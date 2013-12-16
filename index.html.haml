@@ -1,0 +1,86 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Elephants In The Dark
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "Kim Foale", :name => "author"}
+      / HTML5 shim, for IE6-8 support of HTML elements
+      /[if lt IE 9]
+      = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+      / Styles
+      = stylesheet_link_tag "styles.css"
+      = stylesheet_link_tag "/javascripts/mediaelement/build/mediaelementplayer.min.css"
+      = stylesheet_link_tag "screen.css"
+      / Javascript
+      = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+      = javascript_include_tag "mediaelement/build/mediaelement-and-player.min.js"
+      = javascript_include_tag "script.js"
+
+  %body
+    .navbar.navbar-inverse
+      .navbar-inner
+        .container
+          %a.brand{:href => "#"} Elephants In The Dark
+          %ul.nav
+            %li.active
+              %a{:href => "/"} Home
+            %li.active
+              %a{:href => "/#playlist"} Playlist
+            %li
+              %a{:href => "/#credits"} Credits
+    .container
+      .hero-unit
+        %h1 Elephants In The Dark
+        %p An experimental film, produced for <em>Be Live</em> at <a href="http://thepenthousenq.com/">The Penthouse</a> by Kim Foale. Play fullscreen, and listen.
+        %button#reset.btn.btn-primary Reset
+
+      #players.row
+        #video-container
+          %video#video-player{:autoplay => "true"}
+          %h3#video-popover
+        #audio-container
+          %audio#audio-player{:controls => "controls", :autoplay => "true"}
+
+      .row
+        #playlist
+          %h2 Playlist
+          .row
+            .span3
+              %h3 Video
+              %ol#video-playlist
+                %li{:movieurl => "computer-lab"} 
+                  %a Computer Lab
+                %li{:movieurl => "hoover"} 
+                  %a Hoover
+                %li{:movieurl => "mancunian-way"} 
+                  %a Road
+                %li{:movieurl => "weir"} 
+                  %a Weir
+                %li{:movieurl => "radio"} 
+                  %a Radio
+            .span3
+              %h3 Audio
+              %ol#audio-playlist
+                %li{:audiourl => "computer-lab.mp3"} 
+                  %a Computer Lab
+                %li{:audiourl => "hoover.mp3"} 
+                  %a Hoover
+                %li{:audiourl => "mancunian-way.mp3"} 
+                  %a Road
+                %li{:audiourl => "weir.mp3"} 
+                  %a Weir
+                %li{:audiourl => "radio.mp3"} 
+                  %a Radio
+
+      #credits.row
+        %h2 Credits and Thanks
+        %dl
+          %dt Kim Foale
+          %dd Director, coder, audio and video recording.
+          %dt Sylvia Kolling
+          %dd Location spotter, invaluable company, general dogsbody.
+          %dt Josh R
+          %dd Camera loan.
+          %dt Nichola Hallet
+          %dd Hoover Player.
